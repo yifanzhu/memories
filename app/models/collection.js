@@ -5,14 +5,12 @@ var Schema = mongoose.Schema;
 var postSchema = new Schema({
 	title: String,
 	imgUrl: String,
-	content: String,
-	category: Array,
-	_collectionId: {type: mongoose.Schema.Types.ObjectId, ref: 'Collection'},
+	description: String,
 	_userId: {type: mongoose.Schema.Types.ObjectId, ref: 'User'},
 	updated_at: {
 		type: Date, default: Date.now
 	}
 },
-{ collection: 'Posts' });
+{ collection: 'Collections' });
 
-module.exports = mongoose.model('Post', postSchema);
+module.exports = mongoose.model('Collection', collectionSchema);

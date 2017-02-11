@@ -7,8 +7,7 @@ var userSchema = new Schema({
 	email: String,
 	password: String,
 	gender: String,
-	avatar: String,
-	posts : [{ type: Schema.Types.ObjectId, ref: 'Post' }]
+	avatar: String
 },
 { collection: 'Users' });
 

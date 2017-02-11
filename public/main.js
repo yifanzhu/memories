@@ -1,5 +1,5 @@
 require.config({
-
+    base: './../',
     paths: {
         angular: 'bower_components/angular/angular.min',
         'angular-animate': 'bower_components/angular-animate/angular-animate.min',
@@ -13,6 +13,7 @@ require.config({
         'angular-messages': 'bower_components/angular-messages/angular-messages.min',
         'angular-sanitize': 'bower_components/angular-sanitize/angular-sanitize.min',
         'angular-ui-router': 'bower_components/angular-ui-router/release/angular-ui-router.min',
+        'angular-file-upload': 'bower_components/angular-file-upload/dist/angular-file-upload.min',
         jquery: 'bower_components/jquery/dist/jquery.min',
         lodash: 'bower_components/lodash/lodash'
     },
@@ -61,6 +62,9 @@ require.config({
              deps: ['angular-aria', 'angular-animate', 'angular-messages']
         },
         'angular-material-icons': [
+            'angular'
+        ],
+        'angular-file-upload': [
             'angular'
         ],
         jquery: {

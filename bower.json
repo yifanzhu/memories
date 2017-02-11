@@ -17,7 +17,8 @@
     "angular-cookies": "~1.6.1",
     "angular-bootstrap": "^2.2.0",
     "angular-sanitize": "~1.6.1",
-    "angular-material-icons": "^0.7.1"
+    "angular-material-icons": "^0.7.1",
+    "angular-file-upload": "^2.5.0"
   },
   "private": true
 }

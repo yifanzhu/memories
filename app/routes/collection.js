@@ -1,9 +1,9 @@
-var Post = require('../models/post');
+var Collection = require('../models/collection');
 
 module.exports = function(app) {
 
-    app.get('/api/posts', function (req, res) {
-        Post.find({}, function (err, data) {
+    app.get('/api/collections', function (req, res) {
+        Collection.find({}, function (err, data) {
             if (err) {
                 res.send(err);
             }
@@ -13,19 +13,8 @@ module.exports = function(app) {
         });
     });
 
-    app.get('/api/posts/find/:id', function (req, res) {
-        Post.find({_collectionId: req.params.id}, function (err, data) {
-            if (err) {
-                res.send(err);
-            }
-            else {
-                res.json(data);
-            }
-        });
-    });
-
-    app.get('/api/posts/:id', function (req, res) {
-        Post.findById(req.params.id)
+    app.get('/api/collections/:id', function (req, res) {
+        Collection.findById(req.params.id)
             .exec(function (err, data) {
                 if (err) {
                     res.send(err);
@@ -36,17 +25,16 @@ module.exports = function(app) {
             });
     });
 
-    app.post('/api/posts', function (req, res) {
+    app.post('/api/collections', function (req, res) {
       
         var data = req.body;
-        var post = new Post({
+        var collection = new Collection({
             title: data.title,
             imgUrl: data.imgUrl,
-            content: data.content,
-            comments: data.comments,
+            description: data.description,
             _userId: data.userId
         });
-        post.save(function (err) {
+        collection.save(function (err) {
             if (err) {
                 res.send(err)
             }
@@ -57,11 +45,11 @@ module.exports = function(app) {
         });
     });
 
-    app.put('/api/posts', function (req, res) {
+    app.put('/api/collections', function (req, res) {
         var data = req.body,
             query = {'_id': data.id};
 
-        Post.findOneAndUpdate(query, data, {}, function(err){
+        Collection.findOneAndUpdate(query, data, {}, function(err){
             if (err) {
                 res.send(err)
             }
@@ -72,8 +60,8 @@ module.exports = function(app) {
 
     });
 
-    app.delete('/api/posts', function (req, res) {
-        Post.findOne({
+    app.delete('/api/collections', function (req, res) {
+        Collection.findOne({
             'title': 'aa'
         }, '', function (err, data) {
             if (err) {

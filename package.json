@@ -4,7 +4,7 @@
   "description": "Sherry's Memories",
   "main": "server.js",
   "scripts": {
-    "postinstall": "./node_modules/bower/bin/bower install --config.cwd=./public",
+    "postinstall": "./node_modules/bower/bin/bower install",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },

@@ -1,5 +1,5 @@
 define(['./module'], function (module) {
-	return module.controller('memory.postDetailCtrl', ['$scope', '$cookies', '$stateParams','memory.postService',
+	return module.controller('memory.post.viewCtrl', ['$scope', '$cookies', '$stateParams','memory.post.service',
 		function($scope, $cookies, $stateParams, postService) {
 
 			var post = {};

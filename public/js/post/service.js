@@ -1,20 +1,24 @@
 define(['./module', 'lodash'], function (module, _) {
 	'use strict';
-	return module.factory('memory.postService', ['$http',function($http) {
+	return module.factory('memory.post.service', ['$http',function($http) {
 
 		var getAllpost = function() {
 			return $http.get('/api/posts');
 		};
+
+		var findPost = function(id) {
+			return $http.get('/api/posts/find/' + id);
+		};
 		
-		var getpostById = function(id) {
+		var getPostById = function(id) {
 			return $http.get('/api/posts/' + id);
 		};
 		
-		var createpost = function(post) {
+		var createPost = function(post) {
 			return $http.post('/api/posts', post);
 		};
 		
-		var updatepost = function(post) {
+		var updatePost = function(post) {
 			return $http.put('/api/posts', post);
 		};
 		
@@ -30,9 +34,10 @@ define(['./module', 'lodash'], function (module, _) {
 		
 		return {
 			getAllpost: getAllpost,
-			getpostById: getpostById,
-			updatepost: updatepost,
-			createpost: createpost,
+			findPost: findPost,
+			getpostById: getPostById,
+			updatepost: updatePost,
+			createpost: createPost,
 			createComment: createComment,
 			findComments: findComments
 		}
