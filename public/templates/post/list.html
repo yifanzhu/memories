@@ -1,0 +1,23 @@
+<md-content class="md-padding" layout-xs="column" layout="row" layout-wrap>
+	 <md-card ng-repeat="tile in postList" ng-click="postDetail(tile._id)" flex="30">
+        <img ng-src="{{tile.imgUrl}}" class="md-card-image" alt="Washed Out">
+        <md-card-title>
+          <md-card-title-text>
+            <span class="md-headline">{{tile.title}}</span>
+          </md-card-title-text>
+        </md-card-title>
+        <md-card-content>
+          <p>
+            {{tile.content}}
+          </p>
+        </md-card-content>
+        <md-card-actions layout="row" layout-align="end center">
+          <md-button class="md-icon-button" aria-label="Favorite">
+            <i class="fa fa-heart fa-lg" aria-hidden="true"></i>
+          </md-button>
+          <md-button class="md-icon-button" aria-label="Share">
+            <i class="fa fa-share-square-o fa-lg" aria-hidden="true"></i>
+          </md-button>
+        </md-card-actions>
+      </md-card>
+</md-content>

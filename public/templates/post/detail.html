@@ -1,0 +1,57 @@
+<md-content layout-margin>
+	<md-card>
+        <md-card-header>
+          	<md-button class="md-icon-button" aria-label="Favorite">
+          		<md-icon md-svg-icon="img/icons/favorite.svg" style="color: greenyellow;"></md-icon>
+        	</md-button>
+        </md-card-header>
+        <img ng-src="{{post.imgUrl}}" class="md-card-image" alt="Washed Out">
+        <md-card-title>
+          <md-card-title-text>
+            <h2>{{post.title}}</h2>
+          </md-card-title-text>
+        </md-card-title>
+        <md-card-content>
+        	<span style="margin-right: 20px;">
+				<i class="fa fa-user fa-lg" aria-hidden="true"></i>&nbsp
+				<a style="font-size: 15px;" href="#">{{post.author}}</a>
+				<md-tooltip>Author</md-tooltip>
+			</span>
+			<span style="margin-right: 20px;">
+				<i class="fa fa-calendar fa-lg" aria-hidden="true"></i>&nbsp
+				<a style="font-size: 15px;" href="#">Juni, 30 2014</a>
+				<md-tooltip>Date and Time</md-tooltip>
+			</span>
+			<span style="margin-right: 20px;">
+				<i class="fa fa-tags fa-lg" aria-hidden="true"></i>&nbsp
+				<a style="font-size: 15px;" href="#">Uncategories</a>, 
+				<a style="font-size: 15px;" href="#">Lanscape</a>
+				<md-tooltip>Categories</md-tooltip>
+			</span>
+			<span style="margin-right: 20px;">
+				<i class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i>
+				<a style="font-size: 15px;" href="#">Edit</a>
+				<md-tooltip>Edit post</md-tooltip>
+			</span>
+        	<div class="hr-single"></div>
+        </md-card-content>
+        <md-card-content>
+			<p ng-bind-html="post.content"></p>
+			<div class="hr-single"></div>
+        </md-card-content>
+		<md-card-content>
+			<div ng-repeat="comment in post.comments">
+				<p ng-bind-html="comment.content"></p>
+				<p ng-bind-html="comment.user"></p>
+				<p ng-bind-html="comment.date"></p>
+			</div>
+
+			<div class="hr-single"></div>
+		</md-card-content>
+		<md-card-content>
+			<ng-ckeditor ng-model="post.newComment" skin="moono" remove-buttons="Image" remove-plugins="iframe,flash,smiley">
+			</ng-ckeditor>
+			<md-button class="md-raised" ng-click="addComment()">add comment</md-button>
+		</md-card-content>
+    </md-card>
+</md-content>

@@ -1,0 +1,20 @@
+<md-card>
+	<md-content layout-margin layout="column">
+		<div layout="row">
+			<md-input-container flex>
+		        <label>Title</label>
+		        <input type="text" name="cellType" ng-model="post.title">
+		    </md-input-container>
+		    <md-input-container flex>
+		        <label>ImgURL</label>
+		         <input type="text" name="cellType" ng-model="post.imgUrl">
+		    </md-input-container>
+		</div>
+		<md-input-container flex>
+			<ng-ckeditor ng-model="post.content" skin="moono" remove-buttons="Image" remove-plugins="iframe,flash,smiley">	
+			</ng-ckeditor>
+		</md-input-container>
+		<md-button class="" ng-click="create()">Add</md-button>
+	</md-content>
+</md-card>
+

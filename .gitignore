@@ -1,0 +1,15 @@
+# Dependency directories
+node_modules
+bower_components
+
+# Intellij
+.idea/
+*.iml
+*.iws
+
+# Mac
+.DS_Store
+
+# Logs
+logs
+*.log

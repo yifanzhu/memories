@@ -1,0 +1,26 @@
+{
+  "name": "memories",
+  "version": "1.0.0",
+  "description": "Sherry's Memories",
+  "main": "server.js",
+  "scripts": {
+    "postinstall": "./node_modules/bower/bin/bower install --config.cwd=./public",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yifanzhu/memories.git"
+  },
+  "author": "Yifan Zhu",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "bower": "^1.7.9",
+    "express": "^4.14.0",
+    "mongoose": "^4.6.1"
+  },
+  "engines": {
+    "node": "6.2.1"
+  }
+}

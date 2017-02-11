@@ -1,0 +1,32 @@
+<nav class="navbar navbar-toggleable-md sticky-top navbar-light bg-faded">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="#">Memory</a>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <md-button ng-click="popLogin()" ng-if="!user" aria-label="signin">Login</md-button>
+            </li>
+            <li class="nav-item">
+                <md-button ng-click="popSignUp()" aria-label="signup">Sign Up</md-button>
+            </li>
+            <li class="nav-item">
+                <md-button ng-click="signOut()" ng-if="user" aria-label="signout">Sign Out</md-button>
+            </li>
+            <li class="nav-item">
+                <md-button ng-click="create()" ng-if="user" aria-label="create">Create</md-button>
+            </li>
+        </ul>
+        <div ng-if="user">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <md-button ng-click="create()" aria-label="create">Create</md-button>
+                </li>
+                <li class="nav-item">
+                    <p style="margin: 0.6em;">Welcome! {{user.name}}</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

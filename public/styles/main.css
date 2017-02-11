@@ -1,0 +1,35 @@
+.bg-img {
+  	padding: 25%;
+	left:0;
+	right:0;
+	position:absolute;
+    background-size: cover;
+    background-image: url(http://res.cloudinary.com/dihnc49qr/image/upload/v1478314764/photo-1453928582365-b6ad33cbcf64_t0ixly.jpg);
+  	background-attachment: fixed;
+  	vertical-align:middle;
+	filter: brightness(0.5);
+}
+
+.demo-menu-example {
+	background: white;
+	border-radius: 4px;
+	box-shadow: 0 7px 8px -4px rgba(0, 0, 0, 0.2),
+	0 13px 19px 2px rgba(0, 0, 0, 0.14),
+	0 5px 24px 4px rgba(0, 0, 0, 0.12);
+	width: 256px;
+}
+
+.hr-single {
+	border-bottom: 2px dashed #ddd;
+	margin: 20px 0 0 0;
+}
+
+.home-section {
+	padding:3em;
+	height: 100%;
+}
+
+.carousel-control.left, .carousel-control.right {
+	background-image: none;
+	width:auto;
+}
